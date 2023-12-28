@@ -1,0 +1,107 @@
+/* BLOCK - START */
+
+.block{
+    &__contents{
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+
+        &__img{
+            width: 100%;
+        }
+
+        &__img2{
+            width: 100%;
+            position: absolute;
+        }
+
+        &__row{
+            position: absolute;
+            padding: 0 0 70px 60px;
+            @include adaptive-value('padding-left', 60, 20);
+            @include adaptive-value('padding-bottom', 70, 20);
+        }
+
+
+        &__title{
+            width: 70%;
+            color: $white-color;
+            @include adaptive-value('font-size', 64, 10);
+            font-weight: 600;
+            line-height: 125%;
+
+            @media screen and (max-width: 1100px) {
+                width: 80%;      
+            }
+
+            @media screen and (max-width: 768px) {
+                font-size: 29px;      
+            }
+
+            @media screen and (max-width: 750px) {
+                display: none;
+            }
+        }
+
+        &__wrap{
+            display: flex;
+            gap: 25px;
+        }
+        
+        &__subtitle{
+            width: 30%;
+            color: $white-color;
+            font-weight: 400;
+            @include adaptive-value('font-size', 25, 10);
+
+            @media screen and (max-width: 800px) {
+               width: 50%; 
+            }
+
+            @media screen and (max-width: 750px) {
+                @include adaptive-value('font-size', 20, 15);
+                width: 90%; 
+             }
+        }
+
+        &__btn{
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            border: 1px solid $white-color;
+            background-position: center;
+            transition: all 0.2s ease-in-out;
+
+            @media screen and (max-width: 750px) {
+                display: none;
+            }
+
+
+            &:hover{
+                border-radius: 50%;
+                background-color: $white-color;
+
+                svg {
+                    transition: all 0.2s ease-in-out;
+                    transform: rotate(30deg);
+                    path{
+                        stroke: $black-color;
+                    }
+                }
+            }
+        }
+    }
+
+        // @media screen and (max-width: 768px) {
+        //     padding: 0 0 50px 40px;
+        //     height: 450px;
+        // }
+
+        // @media screen and (max-width: 650px) {
+        //     padding: 0 0 50px 40px;
+        //     height: 350px;
+        // }
+}
+
+
+/* BLOCK - END */

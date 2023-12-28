@@ -1,0 +1,136 @@
+.header{
+    padding: 10px 0;
+    border-bottom: 1px solid $text-color;
+    margin-bottom: 80px;
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 50px;
+    }
+
+    @media screen and (max-width: 650px) {
+        margin-bottom: 20px;
+    }
+    &__wrap{
+        @extend %flex-between;
+    }
+
+    &__contents{
+        @extend %flex-center;
+    }
+
+
+    &__link{
+        & svg{
+            @include adaptive-value('width', 110, 59);
+            @include adaptive-value('height', 79, 43);  
+        }
+
+    }
+
+
+    &__navbar{
+        width: 750px;
+        @extend %flex-center;
+        gap: 48px;
+
+        @media screen and (max-width: 975px) {
+            display: none;
+        }
+        &__link{
+            color: $text-color;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            transition: all 0.2s ease-in-out;
+            
+
+            &:hover{
+                color: $text-black-color;
+            }
+            
+            &.black{
+                color: $text-black-color;
+                &:hover{
+                    color: $text-color;
+                }
+            }
+        }
+    }
+
+    &__buttons{
+        @extend %flex-center;
+        gap: 12px;
+        &_btn{
+            @include adaptive-value('height', 55, 43);
+            border-radius: 8px;
+            @include adaptive-value('padding-top', 18, 9);
+            @include adaptive-value('padding-left', 36, 18);
+            @include adaptive-value('padding-right', 36, 18);
+            @include adaptive-value('padding-bottom', 18, 9);
+            background-color: $btn-color;
+            color: $white-color;
+            @include adaptive-value('font-size', 16, 7);
+            font-weight: 600;
+            border: 1px solid $btn-color;
+            transition: all 0.2s ease-in-out;
+            &:hover{
+                background-color: $white-color;
+                color: $btn-text-color;
+                border: 1px solid $btn-text-color;
+            }
+
+            @media screen and (max-width: 750px) {
+               margin-right: 12px;
+            }
+
+            &.two{
+                @extend %flex-center;
+                padding: 16px 11px 15px 18px;
+                background-color: $white-color;
+                color: $btn-text-color;
+                border: 1px solid $btn-text-color;
+
+                @media screen and (max-width: 750px) {
+                    display: none;
+                }
+                &:hover{
+                    background-color: $btn-color;
+                    color: $white-color;
+                    border: 1px solid $btn-color;
+                }
+            }
+        }
+    }
+
+    &__mobile{
+        display: none;
+        @media screen and (max-width: 750px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 30px;
+            padding: 20px 0;
+        }
+
+        &__title{
+            color: $black-color;
+            font-size: 15px;
+            font-weight: 600;
+        }
+    }
+
+    &__mobile_two{
+        display: none;
+        @media screen and (max-width: 750px) {
+            display: block;
+            background-color: $btn-color;
+            @include adaptive-value('height', 55, 43);
+            border-radius: 8px;
+            // @include adaptive-value('padding-top', 18, 9);
+            // @include adaptive-value('padding-left', 36, 18);
+            // @include adaptive-value('padding-right', 36, 18);
+            // @include adaptive-value('padding-bottom', 18, 9);
+        }
+    }
+}

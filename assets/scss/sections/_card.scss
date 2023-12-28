@@ -1,0 +1,143 @@
+/* CARD - START */
+
+.card{
+    margin: 20px 0;
+    &__header{
+        @extend %flex-between;
+        margin-bottom: 50px;
+
+        &__title{
+            color: $black-color;
+            @include adaptive-value('font-size', 39, 20);
+            font-weight: 600;
+
+            &.orange{
+                color: $btn-color;
+            }
+        }
+
+        &__button{
+            border-radius: 8px;
+            border: 1px solid $btn-text-color;
+            padding: 18px 36px;
+            @include adaptive-value('padding-top', 18, 12);
+            @include adaptive-value('padding-left', 36, 24);
+            @include adaptive-value('padding-right', 36, 24);
+            @include adaptive-value('padding-bottom', 18, 12);
+            color: $text-black-color;
+            @include adaptive-value('font-size', 16, 10);
+            font-weight: 600;
+            transition: all 0.2s ease-in-out;
+
+            &:hover{
+                background-color: $btn-color;
+                color: $white-color;
+                border: 1px solid $btn-color;
+            }
+        }
+    }
+
+    &__main{
+        &__wrap{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            &:hover{
+                svg{
+                    cursor: pointer;
+                }
+            }
+
+            @media screen and (max-width: 1200px) {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 19px;
+                overflow-x: scroll;
+            }
+        }
+        &__header{
+            @extend %flex-center;
+            gap: 19px;
+        }
+
+        &__content{
+            position: relative;
+            width: 330px;
+            height: 260px;
+            display: flex;
+            align-items: flex-end;
+            border-radius: 16px;
+            transition: all 0.2s ease-in-out;
+
+            &:hover{
+                margin-bottom: 10px;
+                box-shadow: 0px 26px 52px -2px rgba(34, 60, 80, 0.5);
+                cursor: pointer;
+            }
+
+            
+
+            &_img{
+                border-radius: 16px;
+            }
+
+            &_img2{
+                position: absolute;
+            }
+
+            &__row{
+                padding: 0 24px 26px 26px;
+                position: absolute;
+                z-index: 1;
+
+                
+                @media screen and (max-width: 660px) {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 110px;
+                }
+                
+                &_wrap{
+                    @extend %flex-center;
+                    gap: 5px;
+                }
+
+                &__subtitles{
+                    display: flex;
+                    gap: 63px;
+                }
+            }
+
+            &_title{
+                width: 150px;
+                color: $white-color;
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 12px;
+            }
+
+            &__subtitle{
+                color: $white-color;
+                font-size: 16px;
+                font-weight: 300;
+                transition: all 0.2s ease-in-out;
+
+                &:hover{
+                    color: $text-color;
+                    cursor: pointer;
+                }
+            }
+        }
+
+
+        &__footer{
+            @extend %flex-center;
+            gap: 19px;
+        }
+    }
+}
+
+
+/* CARD - END */

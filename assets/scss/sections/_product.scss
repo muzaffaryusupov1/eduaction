@@ -1,0 +1,231 @@
+/* PRODUCT - START */
+
+.product{
+    margin-top: 60px;
+
+    &__title{
+        color: $black-color;
+        font-size: 39px;
+        font-weight: 600;
+
+        &.orange{
+            color: $btn-color;
+        }
+    }
+
+    &__banner{
+        margin-top: 50px;
+        border-radius: 26px;
+        background-color: $news-card-color;
+        padding: 48px;
+        display: flex;
+
+        @media screen and (max-width: 1200px) {
+            flex-wrap: wrap;
+        }
+
+        &__titles{
+            width: 70%;
+
+            @media screen and (max-width: 1200px) {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+        }
+
+        &__contents{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            @media screen and (max-width: 600px) {
+                width: 100%;
+                flex-direction: row;
+                overflow-x: scroll;
+            }
+        }
+
+        &__title{
+            color: $btn-color;
+            font-size: 31px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        &__subtitle{
+            color: $btn-text-color;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 160%;
+            margin-bottom: 59px;
+
+            @media screen and (max-width: 400px) {
+                font-size: 16px;
+            }
+        }
+
+
+        &__images{
+            display: flex;
+            gap: 12px;
+            cursor: pointer;
+
+            @media screen and (max-width: 600px) {
+                flex-direction: column;
+            }
+        }
+        &__img{
+            width: 127px;
+            height: 127px;
+            border-radius: 8px;
+        }
+
+        &__img2{
+            width: 127px;
+            height: 127px;
+            border-radius: 8px;
+
+            @media screen and (max-width: 600px) {
+                display: none;
+            }
+        }
+
+        &__img3{
+            width: 127px;
+            height: 127px;
+            border-radius: 8px;
+
+            @media screen and (max-width: 600px) {
+                display: none;
+            }
+        }
+
+        &__img_mobile{
+            display: none;
+
+            @media screen and (max-width: 600px) {
+                display: block;
+            }
+        }
+
+        &__buttons{
+            width: 127px;
+            height: 127px;
+            border-radius: 8px;
+            background: linear-gradient(136deg, #FF3605 -6.48%, #7A00F9 105.85%);
+            @extend %flex-center-center;
+
+            @media screen and (max-width: 600px) {
+                display: none;
+            }
+        }
+
+        &__buttons2{
+            width: 127px;
+            height: 127px;
+            border-radius: 8px;
+            background: linear-gradient(136deg, #7656F9 -6.48%, #D9D9FF 105.85%);
+            @extend %flex-center-center;
+
+            @media screen and (max-width: 650px) {
+                display: none;
+            }
+        }
+
+        &__buttons3{
+            width: 127px;
+            height: 127px;
+            border-radius: 8px;
+            background: linear-gradient(136deg, #3C1286 -6.48%, #AA2BD9 105.85%);
+            @extend %flex-center-center;
+
+            @media screen and (max-width: 650px) {
+                display: none;
+            }
+        }
+
+        &__buttons4{
+            width: 127px;
+            height: 127px;
+            border-radius: 8px;
+            background: linear-gradient(136deg, #EF5E6A -6.48%, #DEC222 105.85%);
+            @extend %flex-center-center;
+
+            @media screen and (max-width: 650px) {
+                display: none;
+            }
+        }
+
+        &__buttons5{
+            width: 127px;
+            height: 127px;
+            border-radius: 8px;
+            background: linear-gradient(136deg, #028484 -6.48%, #03E8D1 105.85%);
+            @extend %flex-center-center;
+
+            @media screen and (max-width: 650px) {
+                display: none;
+            }
+        }
+
+        &__btn{
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            border: 1px solid $white-color;
+            background-position: center;
+            transition: all 0.2s ease-in-out;
+            &:hover{
+                border-radius: 50%;
+                background-color: $white-color;
+
+                svg {
+                    transition: all 0.2s ease-in-out;
+                    transform: rotate(30deg);
+                    path{
+                        stroke: $black-color;
+                    }
+                }
+            }
+        }
+
+        &__links{
+            width: 127px;
+            height: 127px;
+            @extend %flex-center-center;
+
+            @media screen and (max-width: 650px) {
+                display: none;
+            }
+        }
+
+        &__links2{
+            display: none;
+
+            @media screen and (max-width: 650px) {
+                width: 127px;
+                height: 127px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+        }
+
+        &__button{
+            padding: 18px 36px;
+            border-radius: 8px;
+            border: 1px solid $btn-text-color;
+            background-color: $white-color;
+            transition: all 0.2s ease-in-out;
+
+            &:hover{
+                background-color: $btn-color;
+                color: $white-color;
+                border: 1px solid $btn-color;
+            }
+        }
+    }
+}
+
+/* PRODUCT - END */

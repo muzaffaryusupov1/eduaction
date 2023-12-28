@@ -1,0 +1,158 @@
+/* ARTICLE - START */
+
+.article{
+    margin-top: 74px;
+
+
+    &__header{
+        @extend %flex-between;
+        margin-bottom: 50px;
+    }
+
+    &__title{
+        color: $black-color;
+        @include adaptive-value('font-size', 39, 20);
+        font-weight: 600;
+    }
+
+    &__button{
+        padding: 18px 36px;
+        @include adaptive-value('padding-top', 18, 10);
+        @include adaptive-value('padding-left', 36, 20);
+        @include adaptive-value('padding-right', 36, 20);
+        @include adaptive-value('padding-bottom', 18, 10);
+        border-radius: 8px;
+        border: 1px solid $btn-text-color;
+        background: $white-color;
+        transition: all 0.2s ease-in-out;
+
+        &:hover{
+            background-color: $btn-color;
+            color: $white-color;
+            border: 1px solid $btn-color;
+        }
+    }
+
+    &__main{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        @media screen and (max-width: 1200px) {
+            flex-direction: row;
+            overflow-x: scroll;
+        }
+        &__row{
+            display: flex;
+            gap: 10px;
+        }
+        &_card{
+            display: flex;
+            @include adaptive-value('gap', 24, 16);
+            width: 698px;
+            border-radius: 12px;
+            background-color: $news-card-color;
+            overflow: hidden;
+            transition: all 0.2s ease-in-out;
+            border: 1px solid transparent;
+
+
+            @media screen and (max-width: 800px) {
+                width: 381px;
+                flex-direction: column;
+            }
+
+            @media screen and (max-width: 600px) {
+                width: 300px;
+            }
+
+            &:hover{
+                box-shadow: 0px 26px 52px -2px rgba(34, 60, 80, 0.5);
+                border: 1px solid $text-black-color;
+                cursor: pointer;
+            }
+
+            &_img1{
+                display: block;
+
+                @media screen and (max-width: 600px) {
+                    display: none;
+                }
+            }
+
+            &_mobile{
+                display: none;
+
+                @media screen and (max-width: 600px) {
+                    flex-shrink: 1;
+                    height: 100%;
+                    display: block;
+                }
+            }
+
+            &__titles{
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                padding: 25px;
+                @include adaptive-value('padding-top', 25, 13);
+                @include adaptive-value('padding-left', 25, 13);
+                @include adaptive-value('padding-right', 25, 13);
+                @include adaptive-value('padding-bottom', 25, 13);
+            }
+
+            &__title{
+                color: $text-black-color;
+                @include adaptive-value('fon-size', 25, 13);
+                font-weight: 400;
+            }
+
+            &__subtitle{
+                color: $btn-text-color;
+                @include adaptive-value('fon-size', 16, 10);
+                font-weight: 400;
+                line-height: 137%;
+            }
+        }
+
+        &__footer{
+            display: flex;
+            gap: 10px;
+        }
+    }
+
+
+    &__mobile{
+        margin: 26px;
+        display: none;
+
+        @media screen and (max-width: 650px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        &_btn{
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: 1px solid $black-color;
+            background-position: center;
+            transition: all 0.2s ease-in-out;
+
+            &:hover{
+                border-radius: 50%;
+                background-color: $black-color;
+
+                svg {
+                    transition: all 0.2s ease-in-out;
+                    path{
+                        stroke: $white-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ARTICLE - END */

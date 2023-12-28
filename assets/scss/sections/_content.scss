@@ -1,0 +1,140 @@
+/* CONTENT - START */
+
+.content{
+    margin-top: 80px;
+
+    &__title{
+        color: $black-color;
+        @include adaptive-value('font-size', 39, 20);
+        font-weight: 600;
+        @include adaptive-value('margin-bottom', 50, 24);
+
+        &.orange{
+            color: $btn-color;
+
+            @media screen and (max-width: 700px) {
+                color: $black-color;
+            }
+        }
+    }
+
+    &__cards{
+        display: flex;
+        gap: 10px;
+
+        @media screen and (max-width: 1000px) {
+            flex-grow: 1;
+            overflow-x: scroll;
+        }
+    }
+
+    &__card{
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        border-radius: 16px;
+        border: 1px solid transparent;
+        transition: all 0.2s ease-in-out;
+
+        @media screen and (max-width: 1000px) {
+            flex-shrink: 0;
+       }
+
+
+        &__img{
+            flex-shrink: 0;
+        }
+
+       
+
+        
+
+        &:hover{
+            box-shadow: 0px 26px 52px -2px rgba(34, 60, 80, 0.5);
+            border: 1px solid $text-black-color;
+            cursor: pointer;
+        }
+
+        &__back{
+            position: absolute;
+        }
+
+        &_btn{
+            display: none;
+            @media screen and (max-width: 1000px) {
+            display: block;
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            @include adaptive-value('padding-top', 16, 10);
+            @include adaptive-value('padding-left', 32, 18);
+            @include adaptive-value('padding-right', 32, 18);
+            @include adaptive-value('padding-bottom', 16, 10);
+            border-radius: 16px;
+            background-color: $btn-color;
+            transition: all 0.2s ease-in-out;
+            color: $white-color;
+            font-size: 16px;
+            font-weight: 400;
+
+            @media screen and (max-width: 900px) {
+                padding: 12px 20px;
+            }
+            &:hover{
+                background-color: $white-color;
+                color: $black-color;
+
+                svg{
+                    path{
+                        fill: $black-color;
+                    }
+                }
+            }
+            }
+        }
+
+        &__title{
+            position: absolute;
+            color: $white-color;
+            font-size: 20px;
+            font-weight: 400;
+            padding: 16px 10px 27px 24px;
+        }
+    }
+
+    &__mobile{
+        margin: 26px;
+        display: none;
+
+        @media screen and (max-width: 650px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        &_btn{
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: 1px solid $black-color;
+            background-position: center;
+            transition: all 0.2s ease-in-out;
+
+            &:hover{
+                border-radius: 50%;
+                background-color: $black-color;
+
+                svg {
+                    transition: all 0.2s ease-in-out;
+                    path{
+                        stroke: $white-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* CONTENT - END */

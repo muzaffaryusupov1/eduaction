@@ -1,0 +1,95 @@
+/* NEWS - START */
+
+.news{
+    margin-top: 80px;
+
+    &__title{
+        color: $black-color;
+        @include adaptive-value('font-size', 39, 25);
+        font-weight: 600;
+    }
+
+    &__wrap{
+        &__row{
+            @extend %flex-center;
+            gap: 19px;
+
+            @media screen and (max-width: 1200px) {
+                overflow-x: scroll;
+            }
+        }
+        &__card{
+            flex-shrink: 0;
+            width: 330px;
+            height: 480px;
+            margin-top: 50px;
+            background-color: $news-card-color;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.2s ease-in-out;
+
+            &:hover{
+                margin-bottom: 10px;
+                box-shadow: 0px 26px 52px -2px rgba(34, 60, 80, 0.5);
+                cursor: pointer;
+            }
+
+            &__titles{
+                display: flex;
+                flex-direction: column;
+                gap: 9px;
+                padding: 24px 20px 47px 24px;
+            }
+
+            &__title{
+                color: $black-color;
+                font-size: 21px;
+                font-weight: 400;
+            }
+
+            &__subtitle{
+                width: 100%;
+                color: $btn-text-color;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 137%;
+                text-align: start;
+            }
+        }
+    }
+
+    &__mobile{
+        margin: 26px;
+        display: none;
+
+        @media screen and (max-width: 650px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        &_btn{
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: 1px solid $black-color;
+            background-position: center;
+            transition: all 0.2s ease-in-out;
+
+            &:hover{
+                border-radius: 50%;
+                background-color: $black-color;
+
+                svg {
+                    transition: all 0.2s ease-in-out;
+                    path{
+                        stroke: $white-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* NEWS - END */
